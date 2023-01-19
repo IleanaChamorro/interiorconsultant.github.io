@@ -20,6 +20,18 @@ a{
     color: var(--text-color);
     text-decoration: none;
 }
+li a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: var(--text-color);
+    margin: auto;
+    display: block;
+}
+li a:hover::after{
+    width: 100%;
+    transition: width 0.3s linear;
+}
 .navbar{
     min-height: 70px;
     display: flex;
@@ -191,7 +203,6 @@ a{
         font-size: 36px;
     }
     .img{
-        position: absolute;
         width: 351px;
         height: 264px;
         left: 50px;
@@ -219,6 +230,10 @@ a{
     .hamburger{
         position: absolute;
         right: 50px;
+    }
+    footer{
+        margin-left: -700px;
+        margin-top: -140px;
     }
 }
 @media(max-width: 768px){
@@ -253,4 +268,18 @@ a{
     .nav-menu.active{
         left: -50px;
     }
+}
+
+footer{
+    position: absolute;
+    width: 287;
+    left: 800px;
+    height: 17px;
+    top: 920px;
+
+    font-family: 'Montserrat';
+    font-size: 14px;
+    text-align: center;
+
+    color: #A9A9A9;
 }
